@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✧･ﾟ: ✧･ﾟ: 𝑴𝒆𝒕𝒂𝑴𝒐𝒓𝒑𝒉𝒐𝒔𝒊𝒔 :･ﾟ✧:･ﾟ✧</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 标题栏 -->
+    <header class="window-bar">
+      <div class="title">✧･ﾟ: ✧･ﾟ: 𝑴𝒆𝒕𝒂𝑴𝒐𝒓𝒑𝒉𝒐𝒔𝒊𝒔 :･ﾟ✧:･ﾟ✧</div>
+      <div class="window-controls">
+        <button class="minimize">−</button>
+        <button class="maximize">□</button>
+        <button class="close">×</button>
+      </div>
+    </header>
+
+    <!-- 工具栏 -->
+    <div class="toolbar">
+        <ul>
+          <li><button id="save" class="toolbar-button">Save</button></li>
+          <li><button id="clear" class="toolbar-button">Clear</button></li>
+          <li><button id="share" class="toolbar-button">Share</button></li>
+        </ul>
+      </div>
+
+    <!-- 主内容 -->
+    <div class="content-area">
+      <!-- 左侧工具栏 -->
+      <aside class="tools">
+        <div class="tool" data-category="head">🧒</div>
+        <div class="tool" data-category="hands">👍</div>
+        <div class="tool" data-category="body">👔</div>
+        <div class="tool" data-category="legs">👖</div>
+        <div class="tool" data-category="accessories">👛</div>
+        <div class="tool" data-category="patterns">♦️</div>
+
+        <hr>
+        <div class="tool" id="rotate">🔄</div>
+        <div class="tool" id="add">➕</div>
+      </aside>
+      <input type="file" id="import-image" accept="image/*" style="display: none;">
+      <!-- 画布区域 -->
+      <div class="canvas-container">
+        <canvas id="canvas" width="400" height="400"></canvas>
+      </div>
+    </div>
+    <div class="material-panel" id="material-panel">
+        <div class="material-header">
+          <button id="close-panel">✖</button>
+        </div>
+        <div class="material-content" id="material-content">
+          <!-- 动态加载的素材项会出现在这里 -->
+        </div>
+      </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

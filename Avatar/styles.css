@@ -1,0 +1,243 @@
+/* 通用样式 */
+body {
+    background-image: url('bg.jpg'); /* 你要使用的背景图片路径 */
+    background-size: cover; /* 保持背景图片覆盖整个页面 */
+    background-position: center; /* 将背景图片居中 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-attachment: fixed; /* 背景固定，不随页面滚动 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bfbfbf;
+  }
+  
+  #app {
+    width: 480px;
+    margin: 20px auto;
+    border: 2px solid #000;
+    background-color: #fff;
+  }
+  
+  /* 标题栏 */
+  .window-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000080; /* 深蓝背景 */
+    color: white;
+    padding: 5px 10px; /* 调整内边距 */
+    box-sizing: border-box;
+  }
+  
+  /* Window Bar 按钮容器 */
+  .window-controls {
+    display: flex; /* 按钮紧挨排列 */
+    gap: 0; /* 移除按钮间隙 */
+  }
+  
+  /* Window Bar 按钮样式 */
+  .window-controls button {
+    width: 20px;
+    height: 20px;
+    background-color: #C0C0C0; /* 浅灰背景 */
+    border: 1px solid #808080; /* 浮雕效果边框 */
+    box-shadow: inset 1px 1px 0 #FFFFFF, inset -1px -1px 0 #808080; /* 浮雕阴影 */
+    margin: 0; /* 去掉默认间隙 */
+    padding: 0; /* 去掉默认内边距 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* 鼠标悬停 */
+  .window-controls button:hover {
+    background-color: #A0A0A0; /* 浅灰悬停效果 */
+  }
+  
+  /* 点击按压效果 */
+  .window-controls button:active {
+    box-shadow: inset 1px 1px 0 #FFFFFF, inset -1px -1px 0 #808080; /* 凹陷按压效果 */
+    background-color: #808080; /* 按压颜色 */
+  }
+  /* 工具栏 */
+  .toolbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 5px 5px;
+    background-color: #d3d3d3;
+    border-bottom: 2px solid #808080;
+  }
+  
+  /* 工具栏的 li 样式 */
+  .toolbar li {
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  /* 工具栏按钮样式 */
+  .toolbar-button {
+    background-color: transparent; /* 无背景色 */
+    border: none; /* 无边框 */
+    color: #333; /* 文字颜色，可以根据需要修改 */
+    font-size: 12px; /* 按钮文字大小，与 li 保持一致 */
+    cursor: pointer; /* 鼠标悬停时显示手形 */
+    padding: 5px; /* 适当的内边距 */
+  }
+  
+  /* 鼠标悬停时的效果 */
+  .toolbar-button:hover {
+    color: #007bff; /* 鼠标悬停时改变文字颜色为蓝色 */
+    text-decoration: underline; /* 增加下划线提示交互 */
+  }
+  
+  /* 主内容区域 */
+  .content-area {
+    display: flex;
+  }
+  
+ /* 工具栏整体样式 */
+.tools {
+    width: 35px;
+    background-color: #C0C0C0; /* 浅灰色背景 */
+    border: 2px solid #808080; /* 深灰色外边框 */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px; /* 按钮间距 */
+    border-right: 2px solid #808080;
+  }
+  
+  /* 单个按钮样式 */
+  .tool {
+    width: 30px;
+    height: 30px;
+    background-color: #D9D9D9; /* 浅灰色按钮 */
+    border:2px solid #555454; /* 默认凸起的白色边框 */
+    box-shadow: inset -1.5px -1.5px 0 #808080, inset 1.5px 1.5px 0 #FFFFFF; /* 浮雕阴影 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+  }
+  
+  /* 鼠标悬停效果 */
+  .tool:hover {
+    border: 2px solid #808080; /* 深灰色边框 */
+    box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #FFFFFF; /* 凹陷效果 */
+    background-color: #B0B0B0; /* 深灰色背景 */
+  }
+  /* 点击按压效果 */
+  .tool:active {
+    box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #FFFFFF; /* 按压凹陷效果 */
+    background-color: #A0A0A0; /* 更深的灰色 */
+  }
+  .tool.selected {
+    background-color: #000080; /* 深蓝色高亮 */
+    color: white;
+    border: 1px solid #FFFFFF;
+  }
+
+  .canvas-container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+  
+  canvas {
+    border: 1px solid black;
+    background-color: white;
+  }
+  
+  /* 调色板 */
+  .color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-top: 2px solid #808080;
+  }
+  
+  .color {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  /* 状态栏 */
+  .status-bar {
+    background-color: #d3d3d3;
+    padding: 5px 10px;
+    border-top: 2px solid #808080;
+    font-size: 12px;
+  }
+  /* 素材面板 */
+.material-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* 面板宽度 */
+    height: 100%; /* 使用整个可用高度 */
+    background-color: #F0F0F0; /* 浅灰背景 */
+    border-right: 2px solid #808080;
+    box-shadow: inset -1px -1px 0 #FFFFFF, inset 1px 1px 0 #808080; /* 浮雕效果 */
+    display: none; /* 默认隐藏 */
+    z-index: 100;
+  }
+  
+  /* 面板头部 */
+  .material-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C0C0C0;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #808080;
+    box-sizing: border-box;
+  }
+  
+  /* 面板内容 */
+  .material-content {
+    height: calc(100% - 40px); /* 减去面板头部高度 */
+    overflow-y: auto; /* 超出时添加滚动条 */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* 居中对齐 */
+  }
+  
+  /* 单个素材项 */
+  .material-item {
+    width: 120px; /* 固定宽度 */
+    height: 120px; /* 固定高度，保持正方形 */
+    background-color: #D9D9D9;
+    border: 1px solid #808080;
+    box-shadow: -1px -1px #FFFFFF, 1px 1px 0 #808080;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* 素材项中的图片 */
+  .material-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 确保图片在容器内完整显示 */
+  }
+  
